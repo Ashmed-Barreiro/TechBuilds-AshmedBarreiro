@@ -1,18 +1,13 @@
-import { ref, computed } from 'vue'
-import { defineStore } from 'pinia'
-import { groupBy } from 'lodash'
+import { defineStore } from "pinia";
 
-export const HardwareStore = defineStore('hardwareStore',() =>{
-    const components = ref([])
-
-    //Actions
-    loadHardware(){
-
-        components = fetch('./public/data/hardware.json')
-        
+export const useHardwareStore = defineStore("hardware", {
+  state: () => ({
+    hardware: []
+  }),
+  actions: {
+    async loadHardware() {
+      const res = await fetch("/src/assets/hardware.json");
+      this.hardware = await res.json();
     }
-
-
-
-
-})
+  }
+});

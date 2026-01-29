@@ -1,5 +1,7 @@
 <script setup>
+import { HardwareStore } from '@/stores/HardwareStore';
 
+const hardwareStore = HardwareStore
 
 
 </script>
