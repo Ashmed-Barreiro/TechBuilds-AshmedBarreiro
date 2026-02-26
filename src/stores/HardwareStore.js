@@ -6,8 +6,9 @@ export const useHardwareStore = defineStore("hardware", {
   }),
   actions: {
     async loadHardware() {
-      const res = await fetch("/src/assets/hardware.json");
+      const res = await fetch("/data/hardware.json");
       this.hardware = await res.json();
+      
     }
   }
 });

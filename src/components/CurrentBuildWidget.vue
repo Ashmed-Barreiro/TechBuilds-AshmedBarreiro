@@ -1,5 +1,6 @@
 <script setup>
 import { useBuildStore } from "../stores/BuildStore";
+import './cart.css'
 const build = useBuildStore();
 </script>
 

@@ -1,0 +1,31 @@
+nav {
+  background: #1e293b;
+  height: 70px;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+nav span:first-child {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #3b82f6;
+  letter-spacing: 1px;
+}
+
+nav span:nth-child(2) {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-right: 15px;
+}
+
+nav button {
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  width: auto;
+  min-width: unset;
+  display: inline-block;
+}

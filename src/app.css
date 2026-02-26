@@ -1,0 +1,134 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background: #0f172a; /* azul oscuro moderno */
+  color: #f1f5f9;
+}
+
+/* CONTENEDOR PRINCIPAL */
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 40px 60px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* TARJETAS DE COMPONENTES */
+.component-card {
+  background: #1e293b;
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.component-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+.component-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.component-card p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+
+/* BOTÓN AÑADIR */
+.component-card button {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.component-card button:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  transform: scale(1.03);
+}
+
+/* NAVBAR */
+nav {
+  background: #1e293b;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+nav h1 {
+  font-size: 1.5rem;
+  color: #3b82f6;
+}
+
+/* WIDGET DE BUILD ACTUAL */
+.current-build {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 320px;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.current-build h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.current-build ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.current-build li {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  opacity: 0.85;
+}
+
+.total-price {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #22c55e;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  section {
+    padding: 20px;
+  }
+
+  nav {
+    padding: 20px;
+  }
+
+  .current-build {
+    position: static;
+    width: 100%;
+    margin: 20px;
+  }
+}

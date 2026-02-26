@@ -8,7 +8,9 @@ const hardwareStore = HardwareStore
 <template>
     <h1>Components disponibles</h1>
     <ul>
-        <li v-for="component in componentes "></li>
+        <li v-for="component in hardwareStore.componentes">
+            {{ component.name }}
+        </li>
     </ul>
 </template>
 <style scoped></style>
