@@ -19,6 +19,7 @@ export const useHardwareStore = defineStore('hardware', () => {
   }
 
   return {
+    useHardwareStore,
     hardware,
     loadHardware,
   }
